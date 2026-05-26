@@ -1,0 +1,269 @@
+:root {
+
+    --deep-ocean: #020c1b;
+    --mid-ocean: #0a2a4a;
+    --glow-gold: #f5c842;
+    --glow-teal: #00e5ff;
+    --text-light: #e8f4f8;
+
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Raleway', sans-serif;
+
+}
+
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+/* Page base */
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--deep-ocean);
+
+    font-family: var(--font-body);
+
+}
+
+
+/* Game canvas */
+
+#gameCanvas {
+
+    display: block;
+
+    border: 1px solid rgba(0, 229, 255, 0.12);
+
+    box-shadow:
+        0 0 80px rgba(0, 229, 255, 0.06);
+
+}
+
+
+/* Screen overlays
+   Start screen
+   Win screen
+   Lose screen */
+
+.screen {
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.4rem;
+
+    padding: 2rem;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(2, 20, 50, 0.94) 0%,
+            rgba(2, 12, 27, 0.98) 100%
+        );
+
+}
+
+
+/* Hidden state */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* Game title */
+
+.game-title {
+
+    font-family: var(--font-title);
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+
+    color: var(--glow-gold);
+
+    text-shadow:
+        0 0 20px rgba(245, 200, 66, 0.5),
+        0 0 60px rgba(245, 200, 66, 0.2);
+
+}
+
+
+/* Title accent */
+
+.game-title span {
+
+    display: block;
+
+    color: var(--glow-teal);
+
+    text-shadow:
+        0 0 20px rgba(0, 229, 255, 0.6),
+        0 0 50px rgba(0, 229, 255, 0.2);
+
+}
+
+
+/* Subtitle */
+
+.subtitle {
+
+    max-width: 460px;
+
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    line-height: 1.6;
+
+    font-style: italic;
+    font-weight: 300;
+
+    color: rgba(232, 244, 248, 0.55);
+
+}
+
+
+/* Instructions panel - Gameplay instructions container */
+
+.instructions {
+
+    max-width: 420px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.6rem;
+
+    padding: 1.2rem 2rem;
+
+    border-radius: 10px;
+
+    background: rgba(0, 229, 255, 0.05);
+
+    border:
+        1px solid rgba(0, 229, 255, 0.13);
+
+}
+
+
+/* Instructions title */
+
+.instructions h2 {
+
+    margin-bottom: 0.3rem;
+
+    font-family: var(--font-title);
+
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    color: var(--glow-teal);
+
+}
+
+
+/* Instructions text */
+
+.instructions p {
+
+    font-size: 0.88rem;
+    line-height: 1.5;
+
+    color: var(--text-light);
+
+}
+
+
+/* Keyword highlighting */
+
+.instructions strong {
+
+    font-weight: 600;
+
+    color: var(--glow-teal);
+
+}
+
+
+/* Buttons - styling for all menu buttons */
+
+button {
+
+    padding: 0.85rem 2.6rem;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-family: var(--font-title);
+
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+
+    color: var(--deep-ocean);
+
+    background: var(--glow-gold);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+
+    box-shadow:
+        0 0 22px rgba(245, 200, 66, 0.35);
+
+}
+
+
+/* Button hover state */
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 36px rgba(245, 200, 66, 0.6);
+
+}
+
+
+/* Button active state */
+
+button:active {
+
+    transform: scale(0.97);
+
+}

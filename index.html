@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Pufferfish Nest Builder</title>
+
+    <!-- Fonts for UI styling -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- Start screen -->
+    <div id="start-screen" class="screen">
+
+        <h1 class="game-title">
+            Pufferfish
+            <span>Nest Builder</span>
+        </h1>
+
+        <p class="subtitle">
+            Inspired by the real nesting behaviour of pufferfish
+            discovered on the ocean floor of Japan.
+        </p>
+
+        <div class="instructions">
+
+            <h2>How to Play</h2>
+
+            <p>
+                Move using the <strong>Arrow Keys</strong>
+            </p>
+
+            <p>
+                Swim over shells and sand fragments to collect them
+            </p>
+
+            <p>
+                Return to the nest and press <strong>Space</strong> to deposit materials
+            </p>
+
+            <p>
+                Stay close to your nest as the shark cannot enter the safe zone
+            </p>
+
+        </div>
+
+        <button id="start-btn">
+            Begin Building
+        </button>
+
+    </div>
+
+    <!-- Win screen -->
+    <div id="win-screen" class="screen hidden">
+
+        <h1 class="game-title">
+            Nest Complete
+        </h1>
+
+        <p class="subtitle">
+            Your nest was successful. The female pufferfish has arrived.
+        </p>
+
+        <button id="restart-btn-win">
+            Build Again
+        </button>
+
+    </div>
+
+    <!-- Lose screen -->
+    <div id="lose-screen" class="screen hidden">
+
+        <h1 class="game-title">
+            Nest Destroyed
+        </h1>
+
+        <p class="subtitle">
+            The shark was too dangerous. Try again.
+        </p>
+
+        <button id="restart-btn-lose">
+            Restart
+        </button>
+
+    </div>
+
+    <!-- Main game canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Game scripts -->
+    <script src="js/background.js"></script>
+    <script src="seaweed/nest.js"></script>
+    <script src="glow/collectibles.js"></script>
+    <script src="glow/pufferfish.js"></script>
+    <script src="glow/shark.js"></script>
+    <script src="pickup/ui.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
